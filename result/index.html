@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .block{
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            display: flex;
+            margin: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+            margin-bottom: 20px;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        img{
+            position: relative;
+            left: 23%;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <title>Result Main 2022-23</title>
+</head>
+<body>
+<div class="block">
+    <img src="logo.png" width="50%" class="logo">
+    <h1>Engineering College Ajmer</h1>
+
+    <form id="rollForm">
+        <label for="roll_number">Enter Roll Code:</label>
+        <input type="text" id="roll_number" name="roll_number" required>
+        <button type="submit" target="blank">Submit</button>
+    </form>
+</div>
+
+    <script>
+        // Object to store roll numbers and corresponding PDF file URLs
+
+        document.getElementById("rollForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get the value of the roll number input field
+            var rollNumber = document.getElementById("roll_number").value.trim();
+
+            // Check for multiple roll numbers using if-else if statements
+            if (rollNumber === "22BTU1FDGSH") {
+                window.location.href = "result1.pdf";
+            } else if (rollNumber === "22BTU1MNCFR") {
+                window.location.href = "rishabhResult.pdf";
+            } else if (rollNumber === "22BTU1BBCVD") {
+                window.location.href = "Lucky.pdf";
+            } else if (rollNumber === "22BTU1QASWE") {
+                window.location.href = "Dilkhush.pdf";
+            } else if (rollNumber === "22BTU1TEYRU") {
+                window.location.href = "Divyansh.pdf";
+            } else {
+                // Display error message for invalid roll number
+                alert("Invalid roll number. Please enter a valid roll number.");
+            }
+        });
+    </script>
+
+</body>
+</html>
